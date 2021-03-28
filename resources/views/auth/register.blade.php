@@ -1,4 +1,4 @@
-<x-guest-layout>
+{{-- <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
             <x-jet-authentication-card-logo />
@@ -11,22 +11,22 @@
 
             <div>
                 <x-jet-label for="name" value="{{ __('Name') }}" />
-                <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+                <x-jet-input  class="block mt-1 w-full" id="name" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             </div>
 
             <div class="mt-4">
                 <x-jet-label for="email" value="{{ __('Email') }}" />
-                <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
+                <x-jet-input  class="block mt-1 w-full" id="email" type="email" name="email" :value="old('email')" required />
             </div>
 
             <div class="mt-4">
                 <x-jet-label for="password" value="{{ __('Password') }}" />
-                <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
+                <x-jet-input  class="block mt-1 w-full" id="password" type="password" name="password" required autocomplete="new-password" />
             </div>
 
             <div class="mt-4">
                 <x-jet-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
-                <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
+                <x-jet-input  class="block mt-1 w-full" id="password_confirmation" type="password" name="password_confirmation" required autocomplete="new-password" />
             </div>
 
             @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
@@ -57,4 +57,53 @@
             </div>
         </form>
     </x-jet-authentication-card>
-</x-guest-layout>
+</x-guest-layout> --}}
+
+@extends('layouts.master')
+
+@section('content')
+
+<div class="main container pt-4">
+
+    <div class="row w-100 m-auto justify-content-center align-items-center pt-5">
+      <form  method="POST" action="{{ route('register') }}" class="bg_blur_light p-4 col-12 col-md-6 shadow rounded">
+        @csrf
+        <i class="fas fa-user-lock fa-3x d-block text-center my-3"></i>
+        <h5 class="text-center">فرم ثبت نام</h5>
+        @include('partials.validation-errors')
+
+        <div class="form-group row justify-content-center">
+          <input id="name" type="text" name="name" value="{{old('name')}}" required autofocus autocomplete="name" class="form-control rounded_5 col-10 col-md-8  shadow" placeholder="نام">
+        </div>
+
+        <div class="form-group row justify-content-center">
+          <input id="email" type="email" name="email" value="{{old('email')}}" required class="form-control rounded_5 col-10 col-md-8  shadow" placeholder="ایمیل">
+        </div>
+
+        <div class="form-group row justify-content-center">
+          <input id="password" type="password" name="password" required autocomplete="new-password" class="form-control rounded_5 col-10 col-md-8  shadow" placeholder="کلمه عبور">
+        </div>
+
+        <div class="form-group row justify-content-center">
+          <input id="password_confirmation" type="password" name="password_confirmation" required autocomplete="new-password" class="form-control rounded_5 col-10 col-md-8  shadow" placeholder="تکرار کلمه عبور">
+        </div>
+
+        {{-- <div class="form-group row justify-content-center">
+          <input type="checkbox" class="form-control outline_0 box_shadow_0 border-0 h-auto" >
+          <a href="#" class="text-info mx-2">قوانین</a> را مطالعه کرده ام
+        </div> --}}
+
+        <div class="form-group row justify-content-center">
+          <button class="btn btn-success rounded_5 px-5 shadow-sm">ثبت نام</button>
+        </div>
+        <a class="text-center d-block text-info cursor_pointer_text_shadow col-12 w-100 py-2" href="{{ route('login') }}">
+            قبلا ثبت نام کرده ام
+        </a>
+      </form>
+
+    </div>
+
+  </div>
+
+@endsection
+

@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Livewire\Article\Article;
+use App\Http\Livewire\Index\Index;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/' , Index::class);
+Route::get('/article/{articleId}' , Article::class);
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+// Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+//     return view('dashboard');
+// })->name('dashboard');
