@@ -9,7 +9,7 @@
             <h4 class="text-center ">مقالات راهنمای مسیر</h4>
         </div>
         </a>
-        <a href="#" class="p-4 col-11 col-md-4 animate__animated animate__fadeInDown animate__delay-1s">
+        <a href="#" class="p-4 col-11 col-md-4 animate__animated animate__fadeInDown ">
         <div class="p-3 cursor_pointer_shadow rounded bg_blur_light text-center border_2 border_white">
             <i class="fab fa-react fa-3x"></i>
             <h4 class="text-center ">مقالات زبان های سمت کاربر</h4>
