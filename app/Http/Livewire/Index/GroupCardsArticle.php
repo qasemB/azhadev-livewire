@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Index;
 
 use App\Models\Article;
+use Illuminate\Support\Facades\Validator;
 use Livewire\Component;
 
 class GroupCardsArticle extends Component
