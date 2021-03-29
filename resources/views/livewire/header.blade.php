@@ -13,7 +13,7 @@
             @if (auth()->check())
             <div class="user_header_menu cursor_pointer_text_shadow" >
                 @if (auth()->user()->is_admin == 1)
-                <a href="/dashboard">{{auth()->user()->name}}</a>
+                <a href="/admin">{{auth()->user()->name}}</a>
                 @else
                 <a >{{auth()->user()->name}}</a>
                 @endif

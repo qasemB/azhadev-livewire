@@ -1,10 +1,12 @@
 @if (session()->has('successMessage'))
 <style>
-    .alert_message{
+    .message_container{
+        z-index: 1000000000;
         position: fixed;
         bottom: 1rem;
+    }
+    .alert_message{
         padding: 0.5rem 2rem;
-        z-index: 10000;
         box-shadow: 0 0 5px rgb(19, 78, 7)
     }
 </style>
