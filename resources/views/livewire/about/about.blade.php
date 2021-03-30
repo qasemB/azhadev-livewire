@@ -1,4 +1,5 @@
 <div class="container pt-5">
+    @section('title' , 'معرفی آژادو')
     <div class="row justify-content-center align-items-center py-4">
       <div class="col-12 px-0 mb-3 row d-flex justify-content-center">
         <div dir="rtl" class="col-12">

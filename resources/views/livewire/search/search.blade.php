@@ -1,4 +1,5 @@
 <div id="bestArticles" class="row justify-content-center col-12 col-lg-10 pt-5 m-auto">
+    @section('title' ,'جست و جوی مقالات')
 
     <div class="col-12 row justify-content-center align-items-center mt-3 py-2">
         <div class="col-12 col-md-6 form-group search_box">

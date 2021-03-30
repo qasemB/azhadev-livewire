@@ -32,20 +32,26 @@ class Search extends Component
             $articles = Article::where([
                 ['category_id' , (int)$this->categoryId],
                 ['h_title' ,'like', "%$this->char%"],
+                ['is_active' , 1],
             ])->orWhere([
                 ['category_id' , (int)$this->categoryId],
                 ['top_title' ,'like', "%$this->char%"],
+                ['is_active' , 1],
             ])->orWhere([
                 ['category_id' , (int)$this->categoryId],
                 ['keywords' ,'like', "%$this->char%"],
+                ['is_active' , 1],
             ])->orderBy('id' , 'DESC')->paginate(8);
         }else{
             $articles = Article::where([
                 ['h_title' ,'like', "%$this->char%"],
+                ['is_active' , 1],
             ])->orWhere([
                 ['top_title' ,'like', "%$this->char%"],
+                ['is_active' , 1],
             ])->orWhere([
                 ['keywords' ,'like', "%$this->char%"],
+                ['is_active' , 1],
             ])->orderBy('id' , 'DESC')->paginate(8);
         }
         return view('livewire.search.search',[

@@ -14,9 +14,12 @@ class GroupCardsArticle extends Component
     public function getArticles()
     {
         if ($this->kind == 'best') {
-            $this->articles = Article::where('is_best' , 1)->take(4)->get();
+            $this->articles = Article::where([
+                ['is_best' , 1],
+                ['is_active' , 1],
+            ])->take(4)->get();
         }else{
-            $this->articles = Article::orderBy('id' , 'DESC')->take(4)->get();
+            $this->articles = Article::where('is_active' , 1)->orderBy('id' , 'DESC')->take(4)->get();
         }
     }
 

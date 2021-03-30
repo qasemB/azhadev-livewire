@@ -79,15 +79,15 @@ body {
             linear,
             left top,
             left bottom,
-            from(#161516d3),
-            color-stop(rgba(173, 174, 179, 0.651)),
-            to(#8b878bdc)
+            from(#1615167e),
+            color-stop(rgba(173, 174, 179, 0.473)),
+            to(#8b878b7c)
         ),
         url(../images/banner1.jfif) no-repeat;
     background: linear-gradient(
-            #353435ad,
-            rgba(139, 163, 230, 0.651),
-            #7f7f81dc
+            #1615167e,
+            rgba(173, 174, 179, 0.473),
+            #8b878b7c
         ),
         url(../images/banner1.jfif) no-repeat;
     background-size: cover;
@@ -98,8 +98,8 @@ body {
 
 .bg_blur_light {
     background-color: rgba(255, 255, 255, 0.568);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
 }
 
 .cursor_pointer {

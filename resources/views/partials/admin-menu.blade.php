@@ -1,4 +1,5 @@
       <div>
+        @section('title' , 'پنل ادمین')
         <div class="mx-0 w-100 row justify-content-center align-items-center alert-secondary my-2 py-4">
           <a href="/admin/add-category">
             <span class="btn btn-success rounded_5 mx-3 my-1">

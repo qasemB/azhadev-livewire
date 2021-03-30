@@ -4,7 +4,7 @@
       <div class="image text-center w_30_vw m-auto">
         <img class="max_w_100 " src="{{$article->image}}" alt="{{$article->alt_image}}">
       </div>
-      <div class="p-2 text_container">{!! $article->text !!}</div>
+      <div class="p-2 text_container">{!! nl2br($article->text) !!}</div>
     </div>
 </div>
 
