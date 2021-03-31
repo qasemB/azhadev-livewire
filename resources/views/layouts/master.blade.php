@@ -24,6 +24,7 @@
         <link rel="stylesheet" href="/css/grid.css" />
         <link rel="stylesheet" href="/css/style.css" />
         @yield('pagecss')
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
         <title>@yield('title' , 'azhadev')</title>
     </head>

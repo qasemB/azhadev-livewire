@@ -94,6 +94,11 @@
         </div> --}}
 
         <div class="form-group row justify-content-center">
+            <div class="g-recaptcha" data-sitekey="{{env('CAPTCHA_KEY')}}"></div>
+        </div>
+
+
+        <div class="form-group row justify-content-center">
           <button class="btn btn-success rounded_5 px-5 shadow-sm">ثبت نام</button>
         </div>
         <a class="text-center d-block text-info cursor_pointer_text_shadow col-12 w-100 py-2" href="{{ route('login') }}">

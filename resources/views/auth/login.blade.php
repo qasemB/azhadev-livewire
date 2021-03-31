@@ -73,6 +73,9 @@
           <input type="checkbox" id="remember_me" name="remember" class="form-control outline_0 box_shadow_0 h-auto">
           مرا بخاطر بسپار
         </div>
+        <div class="form-group row justify-content-center">
+            <div class="g-recaptcha" data-sitekey="{{env('CAPTCHA_KEY')}}"></div>
+        </div>
 
         <div class="form-group row justify-content-center">
           <button class="btn btn-success rounded_5 px-5 shadow-sm">ورود</button>
