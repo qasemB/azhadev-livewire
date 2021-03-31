@@ -1,5 +1,10 @@
 <div id="bestArticles" class="row justify-content-center col-12 col-lg-10 pt-5 m-auto">
     @section('title' ,'جست و جوی مقالات')
+    @section('metas')
+    <meta name="googlebot" content="index,follow" />
+    <link rel="canonical" href={{App\Models\Thing::where('title' , 'webAddress')->first()->val.'/search'}}/>
+    <meta property="og:url" content={{App\Models\Thing::where('title' , 'webAddress')->first()->val.'/search'}} />
+    @endsection
 
     <div class="col-12 row justify-content-center align-items-center mt-3 py-2">
         <div class="col-12 col-md-6 form-group search_box">

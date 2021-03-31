@@ -1,5 +1,10 @@
 <div class="container pt-5">
     @section('title' , 'معرفی آژادو')
+    @section('metas')
+    <meta name="googlebot" content="index,follow" />
+    <link rel="canonical" href={{App\Models\Thing::where('title' , 'webAddress')->first()->val.'/about'}}/>
+    <meta property="og:url" content={{App\Models\Thing::where('title' , 'webAddress')->first()->val.'/about'}} />
+    @endsection
     <div class="row justify-content-center align-items-center py-4">
       <div class="col-12 px-0 mb-3 row d-flex justify-content-center">
         <div dir="rtl" class="col-12">
@@ -10,6 +15,8 @@
             Qasem
             <br />
             Full Stack Developer
+            <br />
+            راه ارتباطی : MahdiCmptr@gmail.com
           </h4>
         </div>
       </div>

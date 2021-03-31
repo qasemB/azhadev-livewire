@@ -12,7 +12,13 @@ class Article extends Component
 
     public function mount($articleId)
     {
-        $this->article = ModelsArticle::find((int)$articleId);
+        $article = ModelsArticle::find((int)$articleId);
+        if ($article->last_user_view != request()->ip()) {
+            $article->view_count++;
+            $article->last_user_view = request()->ip();
+            $article->save();
+        }
+        $this->article = $article;
     }
 
     public function render()

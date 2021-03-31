@@ -3,6 +3,18 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:site_name" content="asanDev" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@asandev" />
+        <meta name="description" content="وبسایت ارائه مقالات با موضوع معرفی و ارائه راهنمایی در مسیر یادگیری برنامه نویسی" />
+        <meta name="keywords" content="آموزش برنامه نویسی , راهنمای مسیر برنامه نویسی, مقاله برنامه نویسی" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="راهنمای برنامه نویسی" />
+        <meta property="og:description" content="وبسایت ارائه مقالات با موضوع معرفی و ارائه راهنمایی در مسیر یادگیری برنامه نویسی" />
+        <meta property="og:image" content={{App\Models\Thing::where('title' , 'webAddress')->first()->val.'/images/logo/pngLogo.png'}} />
+        <meta name="twitter:title" content="راهنمای برنامه نویسی" />
+        <meta name="twitter:description" content="وبسایت ارائه مقالات با موضوع معرفی و ارائه راهنمایی در مسیر یادگیری برنامه نویسی" />
+        <meta name="twitter:image" content={{App\Models\Thing::where('title' , 'webAddress')->first()->val.'/images/logo/pngLogo.png'}} />
         <meta name="csrf-token" content="{{ csrf_token() }}">
         @yield('metas')
         <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css" />

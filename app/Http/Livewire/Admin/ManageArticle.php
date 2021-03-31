@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Admin;
 
 use App\Models\Article;
 use App\Models\Comment;
+use App\Models\Keyword;
 use Livewire\Component;
 
 class ManageArticle extends Component
@@ -39,8 +40,11 @@ class ManageArticle extends Component
     public function deleteArticle()
     {
         $this->articles = $this->articles->where('id' , '!=' , $this->articleIdToDelete );
+
         Article::where('id' ,  $this->articleIdToDelete )->delete();
         Comment::where('article_id' , $this->articleIdToDelete)->delete();
+        Keyword::where('for' , $this->articleIdToDelete)->delete();
+
         session()->flash('successMessage' , 'مقاله با موفقیت حذف شد');
         $this->emit("closeMessage" , 3000);
     }

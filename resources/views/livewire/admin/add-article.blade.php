@@ -27,7 +27,7 @@
             </div>
             <div class="form-group col-11 m-auto py-2 text-center">
               متن کامل:
-              <textarea name="text" rows="7" class="form-control col-11 m-auto rounded shadow-sm" wire:model.defer="text" ></textarea>
+              <textarea style="direction: ltr" name="text" rows="7" class="form-control col-11 m-auto rounded shadow-sm" wire:model.defer="text" ></textarea>
               @error('text') <small class="text-center text-danger d-block w-100">{{$message}}</small> @enderror
             </div>
             <div class="form-group col-11 m-auto py-2 text-center">

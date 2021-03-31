@@ -3,7 +3,7 @@
 
       <ul class="d-flex menu_top align-items-center mb-0 px-0">
 
-        <li class="logo_top animate__animated animate__flip">
+        <li class="logo_top">
           <a href="/">
             <img class="cursor_pointer" src="/images/logo/pngLogo.png" />
           </a>
