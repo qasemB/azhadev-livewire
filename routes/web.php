@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use App\Http\Livewire\About\About;
 use App\Http\Livewire\Admin\AddArticle;
 use App\Http\Livewire\Admin\AddCategory;
@@ -25,16 +26,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/' , Index::class);
-Route::get('/article/{articleId}' , Article::class);
-Route::get('/search/{categoryId}/{char?}' , Search::class);
-Route::get('/about' , About::class);
-
-
+Route::post('/userlogin' , [UserController::class , 'userlogin'])->middleware('throttle:10,1');
 Route::get('/logout' , function(){
     Auth::logout();
     return redirect('/');
 });
+
+Route::get('/' , Index::class);
+Route::get('/article/{articleId}' , Article::class);
+Route::get('/search/{categoryId}/{char?}' , Search::class);
+Route::get('/about' , About::class);
 
 Route::group(['middleware' => ['auth:sanctum' , 'checkAdmin']] , function(){
     Route::get('/admin' , AdminIndex::class);

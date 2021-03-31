@@ -11,8 +11,10 @@
 
             <input type="hidden" name="token" value="{{ $request->route('token') }}">
 
-            <div class="block">
-                <x-jet-label for="email" value="{{ __('Email') }}" />
+            <h6 class="text-success">پسوورد جدید خود را وارد کنید</h6>
+
+            <div dir="rtl" class="block">
+                <x-jet-label for="email" value="{{ __('ایمیل') }}" />
                 <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email', $request->email)" required autofocus />
             </div>
 
@@ -26,9 +28,9 @@
                 <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
             </div>
 
-            <div class="flex items-center justify-end mt-4">
+            <div dir="rtl" class="flex items-center justify-end mt-4">
                 <x-jet-button>
-                    {{ __('Reset Password') }}
+                    {{ __('تایید بازنشانی') }}
                 </x-jet-button>
             </div>
         </form>

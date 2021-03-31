@@ -52,7 +52,7 @@
 @section('content')
 <div class="main container pt-4">
     <div class="row w-100 m-auto justify-content-center align-items-center pt-5">
-      <form method="POST" action="{{ route('login') }}" class="w-100 m-auto bg_blur_light p-4 col-12 col-md-6 my-5 shadow rounded">
+      <form method="POST" action="/userlogin" class="w-100 m-auto bg_blur_light p-4 col-12 col-md-6 my-5 shadow rounded">
         @csrf
 
         <i class="fas fa-user-check fa-3x d-block text-center my-3"></i>
