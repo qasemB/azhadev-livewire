@@ -70,6 +70,18 @@
     letter-spacing: 1px;
 }
 
+.errorContainer {
+    position: fixed;
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.errorContainer .error_svg {
+    width: 50vw;
+}
+
 @media (max-width: 768px) {
     .article_content .image {
         width: 50vw !important;
