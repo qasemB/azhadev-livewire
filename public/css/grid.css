@@ -64,6 +64,12 @@
     border-radius: 3rem 0.5rem;
 }
 
+#article_lathin_box {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
 @media (max-width: 768px) {
     .article_content .image {
         width: 50vw !important;
