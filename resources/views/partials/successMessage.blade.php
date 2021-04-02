@@ -10,7 +10,7 @@
         box-shadow: 0 0 5px rgb(19, 78, 7)
     }
 </style>
-<div class="message_container container-fluid animate__animated animate__fadeIn">
+<div class="message_container container-fluid animate__animated animate__shakeX">
     <div dir="rtl" class=" row justify-content-center align-items-center">
         <div class=" m-auto alert_message alert_message_success bg-success text-light rounded col-11 col-md-6 col-lg-5">
             <h5 class="row align-items-center justify-content-center mb-0">
