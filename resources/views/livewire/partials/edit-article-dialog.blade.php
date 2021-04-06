@@ -2,7 +2,7 @@
     @if ($isOpen)
     <div class="edit_dialog bg-light animate__animated animate__fadeInUp animate__faster">
         <div class="edit_dialog_header bg-primary text-white sticky-top">
-            <h5 class="text-center pt-3"><small class="text-warning">عنوان دسته:</small> {{$h_title}}</h5>
+            <h5 class="text-center pt-3"><small class="text-warning">عنوان مقاله:</small> {{$h_title}}</h5>
             <button class="edit_dialog_header_exit_button btn btn-outline-light" wire:click="$set('isOpen' , false)">انصراف</button>
         </div>
 

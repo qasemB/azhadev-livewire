@@ -64,10 +64,27 @@
     border-radius: 3rem 0.5rem;
 }
 
-#article_lathin_box {
+/* #article_lathin_box {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     font-weight: bold;
     letter-spacing: 1px;
+} */
+
+.text_container blockquote {
+    direction: ltr;
+    text-align: left;
+    background: gray;
+    color: white;
+    padding: 0.5rem 3rem 0.5rem 0.5rem;
+    border-radius: 4px;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+}
+.text_container blockquote * {
+    direction: ltr;
+    text-align: left;
+    padding: 0.5rem;
+    margin: 0;
 }
 
 .errorContainer {

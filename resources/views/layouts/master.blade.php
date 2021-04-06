@@ -51,6 +51,7 @@
         <script src="/js/jquery-3.5.1.min.js"></script>
         <script src="/js/popper.js"></script>
         <script src="/js/bootstrap/bootstrap.min.js"></script>
+        <script src="https://cdn.ckeditor.com/ckeditor5/25.0.0/classic/ckeditor.js"></script>
         <script src="/js/grid.js"></script>
         @yield('livewireJs')
         @yield('pagejs')

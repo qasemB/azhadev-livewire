@@ -24,6 +24,15 @@ class AddArticle extends Component
     public $alt_image;
     public $keywords;
 
+    protected $listeners = [
+        'submitForm'
+    ];
+
+    public function submitForm()
+    {
+        $this->addArticle();
+    }
+
     public function resetProperties()
     {
         $this->reset(['category_id','h_title','top_title','top_text','text','image','alt_image','keywords',]);
