@@ -1,4 +1,4 @@
-<div id="articleLeft" class="col-12 col-md-4 col-xl-3 mt-3 mt-md-0">
+<div id="articleLeft" class="col-12 col-md-4 col-xl-3 mb-3 mt-md-0">
     <div class="row bg-light px1 py-5 text-center justify-content-center d-flex rounded w-100 m-auto">
       <a href="/about" class="image d-block rounded-circle overflow-hidden h_7 w_7 text-center justify-content-center">
         <img class="max_w_100 m-auto" src="{{$article->writer->image}}" alt="{{$article->writer->name.' '.$article->writer->lastname}}">

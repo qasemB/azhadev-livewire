@@ -373,4 +373,7 @@ body {
         max-height: 30vh;
         display: flex;
     }
+    .w_30_vw {
+        width: 90vw;
+    }
 }

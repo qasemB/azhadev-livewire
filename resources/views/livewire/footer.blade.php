@@ -1,7 +1,7 @@
 <footer class="container-fluid bg-dark text-light p-3 p-md-4 w-100vw mt-5 mx-0">
     <div class="row">
       <div class="col-11 col-md-4 mx-auto">
-        <h5 class="text-center">عنوان</h5>
+        <h5 class="text-center">درباره آژادِو</h5>
         <p class="text-justify font_0_9">{{$things->where('title' , 'footer_about')->first()->val}}</p>
       </div>
 

@@ -21,7 +21,7 @@
         </div>
     </div>
     @else
-    <h6 class="text-center py-5 text-info"><a href="/login">لطفا وارد شو و نظر بده</a></h6>
+    <h6 class="text-center py-5 text-info"><a target="_blank" href="/login">لطفا وارد شو و نظر بده</a></h6>
     @endif
 
     <div class="col-12 col-md-11 bg-white p-3">
