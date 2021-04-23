@@ -64,7 +64,7 @@
                 @error('keywords') <small class="text-center text-danger d-block w-100">{{$message}}</small> @enderror
               </div>
               <div class="form-group col-11 m-auto py-2 row justify-content-center">
-                <button type="button" class="btn btn-success rounded_5 mx-3 m-auto" wire:click="editArticle">
+                <button id="btnSubmit" type="button" class="btn btn-success rounded_5 mx-3 m-auto">
                   ویرایش مقاله
                 </button>
               </div>

@@ -9,8 +9,7 @@ $(document).ready(function () {
                 });
             })
             .catch((error) => {
-                // console.error(error);
-                console.log("no ck editor");
+                console.error(error);
             });
     }
     var pathname = window.location.pathname;

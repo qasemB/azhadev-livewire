@@ -29,7 +29,13 @@ class EditArticleDialog extends Component
 
     protected $listeners = [
         'showEditDialog',
+        'submitForm'
     ];
+
+    public function submitForm()
+    {
+        $this->editArticle();
+    }
 
     public function resetProperties()
     {
