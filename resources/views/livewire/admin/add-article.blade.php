@@ -64,5 +64,8 @@
             </div>
           </form>
       </div>
+      @section('pagejs')
+        <script src="/js/ckeditor.js"></script>
+      @endsection
 
 </div>

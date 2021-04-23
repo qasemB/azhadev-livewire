@@ -31,11 +31,22 @@
                 <textarea name="top_text" rows="3" class="form-control col-11 m-auto rounded shadow-sm" wire:model.defer="top_text" ></textarea>
                 @error('top_text') <small class="text-center text-danger d-block w-100">{{$message}}</small> @enderror
               </div>
-              <div class="form-group col-11 m-auto py-2 text-center">
+
+
+              {{-- <div class="form-group col-11 m-auto py-2 text-center">
                 متن کامل:
                 <textarea style="direction: ltr" name="text" rows="7" class="form-control col-11 m-auto rounded shadow-sm" wire:model.defer="text" ></textarea>
                 @error('text') <small class="text-center text-danger d-block w-100">{{$message}}</small> @enderror
-              </div>
+              </div> --}}
+
+              <div class="form-group col-11 m-auto py-2 text-center" wire:ignore>
+                متن کامل:
+                <textarea class="form-control m-auto rounded shadow-sm" id="summary-ckeditor" data-note="@this" name="summary-ckeditor" wire:model.defer="text"></textarea>
+            </div>
+            @error('text') <small class="text-center text-danger d-block w-100">{{$message}}</small> @enderror
+
+
+
               <div class="form-group col-11 m-auto py-2 text-center">
                 تصویر:
                 <input type="file" name="image" class="form-control col-11 m-auto rounded_5 box_shadow_0 border-0"  wire:model.defer="image" />
@@ -64,5 +75,10 @@
 
     </div>
     @endif
+
+    @section('pagejs')
+    <script src="/js/ckeditor.js"></script>
+@endsection
+
 
 </div>

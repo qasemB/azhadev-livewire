@@ -85,6 +85,7 @@ class EditArticleDialog extends Component
         $this->alt_image=$data['alt_image'];
         $this->keywords=$data['keywords'];
         $this->articleIdToEdit=$data['id'];
+        $this->emit('reSetCkeditor');
     }
 
     public function mount()
